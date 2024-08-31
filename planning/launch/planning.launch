@@ -1,0 +1,14 @@
+<launch>
+
+    <!-- <arg name="gps_dbc_file" default="/home/nvidia/atv_ws/src/perception/config/CAN_.dbc" />
+    <arg name="gps_can_channel" default="can0" />
+
+    <node name="gps_imu_node" pkg="perception" type="gps_imu_node.py" output="screen">
+        <param name="gps_dbc_file" value="$(arg gps_dbc_file)" />
+        <param name="gps_can_channel" value="$(arg gps_can_channel)" />
+    </node> -->
+
+    <node pkg="planning" type="global_path_planning_node.py" name="global_path_planning_node" output="screen"/>
+    <!-- <node pkg="planning" type="local_path_planning.py" name="local_path_planning_data_node" output="screen"/> -->
+
+</launch>

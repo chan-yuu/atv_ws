@@ -1,0 +1,11 @@
+<launch>
+
+    <arg name="gps_dbc_file" default="$(find wirecontrol)/config/IPC_VCU_ZRD.dbc" />
+    <arg name="gps_can_channel" default="can1" />
+
+    <node name="wirecontrol" pkg="wirecontrol" type="wire_control_pub.py" output="screen">
+        <!-- <param name="gps_dbc_file" value="$(arg gps_dbc_file)" />
+        <param name="gps_can_channel" value="$(arg gps_can_channel)" /> -->
+    </node>
+
+</launch>

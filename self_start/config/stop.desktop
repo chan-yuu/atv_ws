@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=stop
+GenericName=stop
+Comment=stop
+Exec="/home/cyun/las/src/self_stop/config/stop.sh" %f
+Icon=/home/cyun/las/src/self_stop/config/2.jpeg
+Terminal=stop
+Categories=stop;

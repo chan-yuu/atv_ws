@@ -1,0 +1,26 @@
+<launch>
+    <node pkg="perception" type="camera_obstacle.py" name="camera_obstacle_data_node" output="screen"/>
+    <node pkg="perception" type="camera_ori.py" name="camera_data_node" output="screen"/>
+    <node pkg="perception" type="fusion.py" name="fusion_data_node" output="screen"/>
+    <node pkg="perception" type="gps_imu_pub.py" name="gps_imu_pub_node" output="screen"/>
+    <node pkg="perception" type="lane_recognition.py" name="lane_recognition_data_node" output="screen"/>
+    <node pkg="perception" type="radar_obstacle.py" name="radar_data_node" output="screen"/>
+    
+    <node pkg="decision" type="car_decision.py" name="car_decision_data_node" output="screen"/>    
+    <node pkg="planning" type="global_path_planning.py" name="global_path_planning_data_node" output="screen"/>
+    <node pkg="planning" type="local_path_planning.py" name="local_path_planning_data_node" output="screen"/>
+
+    <node pkg="control" type="path_speed_control.py" name="path_speed_tracking_data_node" output="screen"/>
+
+    <node pkg="jobmanagement" type="job_management.py" name="veh_operating_node" output="screen"/>
+
+    <node pkg="wirecontrol" type="wired_control.py" name="wired_control_node" output="screen"/>
+
+    <node pkg="hmi" type="hmi.py" name="hmi_start_end_point_data_node" output="screen"/>
+
+    <node pkg="faultdiagnosis" type="fault_diagnosis.py" name="fault_diagnosis_data_node" output="screen"/>
+
+    <node pkg="net" type="net_data.py" name="net_node" output="screen"/>
+
+
+</launch>

@@ -1,0 +1,6 @@
+<launch>
+
+	<node name="wirecontrol_sub" pkg="wirecontrol" type="wire_control_can_pub.py" output="screen">
+	</node>	
+
+</launch>

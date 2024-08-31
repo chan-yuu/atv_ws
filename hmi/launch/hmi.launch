@@ -1,0 +1,25 @@
+<launch>
+
+    <!-- <node pkg="perception" type="gps_imu_pub.py" name="gps_imu"/> -->
+    <!-- <node name="gps" pkg="perception" type="gps_imu_pubtest.py" /> -->
+    <arg name="gps_dbc_file" default="/home/nvidia/atv_ws/src/perception/config/CAN_.dbc" />
+    <arg name="gps_can_channel" default="can0" />
+
+    <!-- 启动节点，并传递参数 -->
+    <node name="gps_imu_node" pkg="perception" type="gps_imu_node.py" output="screen">
+        <param name="gps_dbc_file" value="$(arg gps_dbc_file)" />
+        <param name="gps_can_channel" value="$(arg gps_can_channel)" />
+    </node>
+
+    <node name="wirecontrol" pkg="wirecontrol" type="wire_control_can_pub.py">
+    </node>
+    <!-- <node name="ndt" pkg="" type=""/>   -->
+    <!-- # <include $(find)> -->
+    <!-- <include file="$(find rslidar_sdk)/launch/start.launch" />
+
+    <include file="$(find ndt_localizer)/launch/ndt_localizer.launch" /> -->
+    <node pkg="hmi" type="hmi_node" name="hmi"/>
+
+    <!-- <node pkg="faultdiagnosis" type="fault_diagnosis.py" name="faultdiagnosis"/> -->
+
+</launch>

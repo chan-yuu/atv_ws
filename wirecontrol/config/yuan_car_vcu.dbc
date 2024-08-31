@@ -1,0 +1,229 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU IPC
+VAL_TABLE_ Flag 1 "Active" 0 "Not Active" ;
+
+
+BO_ 516 VCU_to_IPC_msg4: 8 Vector__XXX
+ SG_ right_Cotton_high : 24|8@1+ (1,0) [0|255] "cm"  IPC
+ SG_ Reserve_9 : 48|16@1+ (1,0) [0|65535] ""  IPC
+ SG_ left_Cotton_high : 16|8@1+ (1,0) [0|255] "cm"  IPC
+ SG_ current_throttle_open : 32|16@1- (0.1,0) [-3276.8|3276.7] "%"  IPC
+ SG_ clamp_angle : 0|16@1- (0.1,0) [-3276.8|3276.7] ""  IPC
+
+BO_ 515 VCU_to_IPC_msg3: 8 VCU
+ SG_ vehicle_status : 56|2@1+ (1,0) [0|3] ""  IPC
+ SG_ SOC : 48|8@1+ (1,0) [0|255] ""  IPC
+ SG_ right_turn_signal : 61|1@1+ (1,0) [0|1] ""  IPC
+ SG_ reversing_lights : 63|1@1+ (1,0) [0|1] ""  IPC
+ SG_ Reserve_8 : 58|2@1+ (1,0) [0|3] ""  IPC
+ SG_ Reserve_7 : 32|16@1+ (1,0) [0|65535] ""  IPC
+ SG_ left_turn_signal : 60|1@1+ (1,0) [0|1] ""  IPC
+ SG_ current_speed : 16|16@1+ (1,0) [0|65535] ""  IPC
+ SG_ current_brake_stroke : 0|16@1+ (1,0) [0|65535] ""  IPC
+ SG_ brake_light : 62|1@1+ (1,0) [0|1] ""  IPC
+
+BO_ 514 VCU_to_IPC_msg2: 8 VCU
+ SG_ Reserve_6 : 32|32@1+ (1,0) [0|4294967295] ""  IPC
+ SG_ faultCode4 : 24|8@1+ (1,0) [0|255] ""  IPC
+ SG_ faultCode3 : 16|8@1+ (1,0) [0|255] ""  IPC
+ SG_ faultCode2 : 8|8@1+ (1,0) [0|255] ""  IPC
+ SG_ faultCode1 : 0|8@1+ (1,0) [0|255] ""  IPC
+
+BO_ 513 VCU_to_IPC_msg1: 8 VCU
+ SG_ Wheel_angle : 48|16@1- (0.01,0) [-327.68|327.67] ""  IPC
+ SG_ Reserve_5 : 26|6@1+ (1,0) [0|63] ""  IPC
+ SG_ Reserve_4 : 7|1@1+ (1,0) [0|1] ""  IPC
+ SG_ if_box_full : 6|1@1+ (1,0) [0|1] ""  IPC
+ SG_ E_stop_status : 4|2@1+ (1,0) [0|3] ""  IPC
+ SG_ driving_mode : 0|2@1+ (1,0) [0|3] ""  IPC
+ SG_ current_speed_range : 2|2@1+ (1,0) [0|3] ""  IPC
+ SG_ current_motor_speed : 32|16@1+ (1,-20000) [-20000|45535] "r/min"  IPC
+ SG_ current_engine_power : 24|2@1+ (1,0) [0|3] ""  IPC
+ SG_ current_angle : 8|16@1- (1,0) [-32768|32767] ""  IPC
+
+BO_ 528 IPC_to_VCU_msg1: 8 IPC
+ SG_ Target_turn_light : 57|2@1+ (1,0) [0|3] ""  VCU
+ SG_ Target_steering_angle : 32|16@1- (1,0) [-32768|32767] "deg"  VCU
+ SG_ Target_Fan_gear : 29|2@1+ (1,0) [0|3] ""  VCU
+ SG_ Reserve_3 : 61|3@1+ (1,0) [0|7] ""  VCU
+ SG_ Reserve_2 : 56|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Reserve_1 : 31|1@1+ (1,0) [0|1] ""  VCU
+ SG_ Door_control : 59|2@1+ (1,0) [0|3] ""  VCU
+ SG_ brake_pressure_request : 49|7@1+ (1,0) [0|127] ""  VCU
+ SG_ brake_enable : 48|1@1+ (1,0) [0|1] ""  VCU
+ SG_ throttle_opening : 8|16@1- (0.1,0) [-3276.8|3276.7] "%"  VCU
+ SG_ speed_range : 6|2@1+ (1,0) [0|3] ""  VCU
+ SG_ Head_control : 24|3@1+ (1,0) [0|7] ""  VCU
+ SG_ Engine_power : 27|2@1+ (1,0) [0|3] ""  VCU
+ SG_ cotton_unloading : 4|1@1+ (1,0) [0|1] ""  VCU
+ SG_ cotton_picker_enable : 3|1@1+ (1,0) [0|1] ""  VCU
+ SG_ cotton_box_control : 0|3@1+ (1,0) [0|7] ""  VCU
+ SG_ auto_enable : 5|1@1+ (1,0) [0|1] ""  VCU
+
+
+
+BA_DEF_ SG_  "Door_control" INT 0 0;
+BA_DEF_ SG_  "Target_Fan_gear" INT 0 0;
+BA_DEF_ SG_  "current_throttle_open" FLOAT 0 0;
+BA_DEF_ SG_  "right_Cotton_high" FLOAT 0 0;
+BA_DEF_ SG_  "left_Cotton_high" FLOAT 0 0;
+BA_DEF_ SG_  "clamp_angle" FLOAT 0 0;
+BA_DEF_ SG_  "reversing_lights" INT 0 0;
+BA_DEF_ SG_  "brake_signal" INT 0 0;
+BA_DEF_ SG_  "right_turn_signal" INT 0 0;
+BA_DEF_ SG_  "left_turn_signal" INT 0 0;
+BA_DEF_ SG_  "Reserve_8" INT 0 0;
+BA_DEF_ SG_  "vehicle_status" INT 0 0;
+BA_DEF_ SG_  "SOC" INT 0 0;
+BA_DEF_ SG_  "Reserve_7" INT 0 0;
+BA_DEF_ SG_  "current_speed" FLOAT 0 0;
+BA_DEF_ SG_  "current_brake_stroke" INT 0 0;
+BA_DEF_ SG_  "Reserve_6" INT 0 0;
+BA_DEF_ SG_  "faultCode4" INT 0 0;
+BA_DEF_ SG_  "faultCode3" INT 0 0;
+BA_DEF_ SG_  "faultCode2" INT 0 0;
+BA_DEF_ SG_  "faultCode1" INT 0 0;
+BA_DEF_ SG_  "Wheel_angle" FLOAT 0 0;
+BA_DEF_ SG_  "current_motor_speed" FLOAT 0 0;
+BA_DEF_ SG_  "Reserve_5" INT 0 0;
+BA_DEF_ SG_  "current_engine_power" INT 0 0;
+BA_DEF_ SG_  "current_angle" FLOAT 0 0;
+BA_DEF_ SG_  "Reserve_4" INT 0 0;
+BA_DEF_ SG_  "if_box_full" INT 0 0;
+BA_DEF_ SG_  "E_stop_status" INT 0 0;
+BA_DEF_ SG_  "current_speed_range" INT 0 0;
+BA_DEF_ SG_  "driving_mode" INT 0 0;
+BA_DEF_ SG_  "Reserve_3" INT 0 0;
+BA_DEF_ SG_  "Target_turn_light" INT 0 0;
+BA_DEF_ SG_  "Reserve_2" INT 0 0;
+BA_DEF_ SG_  "brake_pressure_request" INT 0 0;
+BA_DEF_ SG_  "brake_enable" INT 0 0;
+BA_DEF_ SG_  "Target_steering_angle" FLOAT 0 0;
+BA_DEF_ SG_  "Reserve_1" INT 0 0;
+BA_DEF_ SG_  "Engine_power" INT 0 0;
+BA_DEF_ SG_  "Head_control" INT 0 0;
+BA_DEF_ SG_  "throttle_opening" FLOAT 0 0;
+BA_DEF_ SG_  "speed_range" INT 0 0;
+BA_DEF_ SG_  "auto_enable" INT 0 0;
+BA_DEF_ SG_  "cotton_unloading" INT 0 0;
+BA_DEF_ SG_  "cotton_picker_enable" INT 0 0;
+BA_DEF_ SG_  "cotton_box_control" INT 0 0;
+BA_DEF_ BO_  "VCU_to_IPC_msg4" FLOAT 0 0;
+BA_DEF_  "MultiolexExtEnabled" ENUM  "No","Yes";
+BA_DEF_ BO_  "VCU_to_IPC_msg3" FLOAT 0 0;
+BA_DEF_ BO_  "VCU_to_IPC_msg2" FLOAT 0 0;
+BA_DEF_ BO_  "VCU_to_IPC_msg1" FLOAT 0 0;
+BA_DEF_ BO_  "IPC_to_VCU_msg1" FLOAT 0 0;
+BA_DEF_ BU_  "VCU" FLOAT 0 0;
+BA_DEF_ BU_  "IPC" FLOAT 0 0;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "Door_control" 0;
+BA_DEF_DEF_  "Target_Fan_gear" 0;
+BA_DEF_DEF_  "current_throttle_open" 0;
+BA_DEF_DEF_  "right_Cotton_high" 0;
+BA_DEF_DEF_  "left_Cotton_high" 0;
+BA_DEF_DEF_  "clamp_angle" 0;
+BA_DEF_DEF_  "reversing_lights" 0;
+BA_DEF_DEF_  "brake_signal" 0;
+BA_DEF_DEF_  "right_turn_signal" 0;
+BA_DEF_DEF_  "left_turn_signal" 0;
+BA_DEF_DEF_  "Reserve_8" 0;
+BA_DEF_DEF_  "vehicle_status" 0;
+BA_DEF_DEF_  "SOC" 0;
+BA_DEF_DEF_  "Reserve_7" 0;
+BA_DEF_DEF_  "current_speed" 0;
+BA_DEF_DEF_  "current_brake_stroke" 0;
+BA_DEF_DEF_  "Reserve_6" 0;
+BA_DEF_DEF_  "faultCode4" 0;
+BA_DEF_DEF_  "faultCode3" 0;
+BA_DEF_DEF_  "faultCode2" 0;
+BA_DEF_DEF_  "faultCode1" 0;
+BA_DEF_DEF_  "Wheel_angle" 0;
+BA_DEF_DEF_  "current_motor_speed" 0;
+BA_DEF_DEF_  "Reserve_5" 0;
+BA_DEF_DEF_  "current_engine_power" 0;
+BA_DEF_DEF_  "current_angle" 0;
+BA_DEF_DEF_  "Reserve_4" 0;
+BA_DEF_DEF_  "if_box_full" 0;
+BA_DEF_DEF_  "E_stop_status" 0;
+BA_DEF_DEF_  "current_speed_range" 0;
+BA_DEF_DEF_  "driving_mode" 0;
+BA_DEF_DEF_  "Reserve_3" 0;
+BA_DEF_DEF_  "Target_turn_light" 0;
+BA_DEF_DEF_  "Reserve_2" 0;
+BA_DEF_DEF_  "brake_pressure_request" 0;
+BA_DEF_DEF_  "brake_enable" 0;
+BA_DEF_DEF_  "Target_steering_angle" 0;
+BA_DEF_DEF_  "Reserve_1" 0;
+BA_DEF_DEF_  "Engine_power" 0;
+BA_DEF_DEF_  "Head_control" 0;
+BA_DEF_DEF_  "throttle_opening" 0;
+BA_DEF_DEF_  "speed_range" 0;
+BA_DEF_DEF_  "auto_enable" 0;
+BA_DEF_DEF_  "cotton_unloading" 0;
+BA_DEF_DEF_  "cotton_picker_enable" 0;
+BA_DEF_DEF_  "cotton_box_control" 0;
+BA_DEF_DEF_  "VCU_to_IPC_msg4" 0;
+BA_DEF_DEF_  "MultiolexExtEnabled" "No";
+BA_DEF_DEF_  "VCU_to_IPC_msg3" 0;
+BA_DEF_DEF_  "VCU_to_IPC_msg2" 0;
+BA_DEF_DEF_  "VCU_to_IPC_msg1" 0;
+BA_DEF_DEF_  "IPC_to_VCU_msg1" 0;
+BA_DEF_DEF_  "VCU" 0;
+BA_DEF_DEF_  "IPC" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "BusType" "";
+VAL_ 515 right_turn_signal 1 "Active" 0 "Not Active" ;
+VAL_ 515 reversing_lights 1 "Active" 0 "Not Active" ;
+VAL_ 515 left_turn_signal 1 "Active" 0 "Not Active" ;
+VAL_ 515 brake_light 1 "Active" 0 "Not Active" ;
+VAL_ 513 if_box_full 1 "Active" 0 "Not Active" ;
+VAL_ 528 cotton_unloading 1 "Active" 0 "Not Active" ;
+VAL_ 528 cotton_picker_enable 1 "Active" 0 "Not Active" ;
+VAL_ 528 auto_enable 1 "Active" 0 "Not Active" ;
+

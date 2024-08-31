@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot name="vehicle">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="24 12 12"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1.0 0.3 0.2 1.0"/>
+      </material>
+    </visual>
+  </link>
+</robot>
+

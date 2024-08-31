@@ -1,0 +1,215 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU ADCU
+VAL_TABLE_ TarSteeringMod 7 "力矩叠加指令" 6 "清除故障" 5 "手动介入恢复指令" 4 "手动控制指令" 3 "保留" 2 "保留" 1 "自动控制指令" 0 "待机指令" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ control_precharge : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ none : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2349442512 act_veh_st_3: 8 VCU
+ SG_ SOC : 24|8@1+ (0.4,0) [0|100] "" Vector__XXX
+ SG_ ODO : 0|24@1+ (1,0) [0|16777214] "" Vector__XXX
+
+BO_ 2348929189 steering_control: 8 ADCU
+ SG_ steering_control_valid : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCU_valid : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ target_steering_mod : 16|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ target_steering_angle : 0|16@1+ (0.1,-1575) [-1575|1575] "" Vector__XXX
+ SG_ target_steering_velocity : 32|8@1+ (10,0) [50|540] "" Vector__XXX
+ SG_ steering_msg_life : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ target_steering_torque : 24|8@1+ (0.1,-12.8) [-12.8|12.7] "" Vector__XXX
+
+BO_ 2348994725 drive_control: 8 ADCU
+ SG_ drive_msg_life : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ fault_code : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ target_direction : 32|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ target_acceleration : 16|16@1+ (0.00048828125,-16) [-16|15.9] "" Vector__XXX
+ SG_ target_velocity : 0|16@1+ (0.00390625,0) [0|250.99609375] "" Vector__XXX
+
+BO_ 2349060261 barke_control: 8 ADCU
+ SG_ XBR2_checksum : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ XBR2_Ctrl_Mode : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ XBR2_Priority : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ XBR2_message_counter : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ XBR2_EBI_Mode : 16|2@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ target_deceleration : 0|16@1+ (0.00048828125,-15.687) [-10|10] "" Vector__XXX
+
+BO_ 2349125797 body_control: 8 ADCU
+ SG_ middle_door_control : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ wiper_wash_switch : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ width_lamp_control : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ backup_light_control : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ hazard_lights_control : 36|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ high_low_beam_control : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ body_state : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ horn_control : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ front_door_control : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ turning_lighting_control : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ mode_disp : 1|2@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2349387941 parking_control: 8 ADCU
+ SG_ park_work_mode : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ park_control_mode : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ temp_park_req : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ park_msg_checksum : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ temp_park_pressure : 24|8@1+ (5,0) [0|1250] "" Vector__XXX
+ SG_ park_air_pressure : 16|8@1+ (5,0) [0|1250] "" Vector__XXX
+ SG_ longterm_park_req : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2349180368 act_veh_st_1: 8 VCU
+ SG_ veh_st_life_1 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ act_steering_state : 48|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ act_steering_torque : 40|8@1+ (0.07,-127) [-127|-109.15] "" Vector__XXX
+ SG_ act_steering_velocity : 32|8@1+ (10,0) [0|540] "" Vector__XXX
+ SG_ act_steering_motor_torque : 16|16@1+ (0.000152,-5) [-5|4.96132] "" Vector__XXX
+ SG_ act_steering_angle : 0|16@1+ (0.1,-1575) [-1575|1575] "" Vector__XXX
+
+BO_ 2349245904 act_veh_st_2: 8 VCU
+ SG_ veh_st_life_2 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ external_automatic_drive_req : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EBS_state : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ act_vehicle_velocity : 24|16@1+ (0.00390625,0) [0|250] "" Vector__XXX
+ SG_ act_brake_pedal : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ act_acc_pedal : 8|8@1+ (0.01,0) [0|1] "" Vector__XXX
+ SG_ act_gear_state : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2349311440 instrument: 8 VCU
+ SG_ act_wiper_wash_state : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ act_width_light : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ act_backup_light : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ act_hazard_lights : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ act_low_high_beam_light_state : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ act_middle_door_state : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HMI_life_counter : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ act_front_door_state : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ act_turning_light_signal : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "SigType" STRING ;
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "Yes","No";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","reserved","OnChange","reserved","reserved","reserved","NoSigSendType";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 10000;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "SingleFrame" INT 0 1;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","reserved","cyclicIfActive","reserved","reserved","reserved","reserved","reserved","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "Yes","No";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_  "SAE_J1939-71_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939-73_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939-21_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939-75_SpecVersion" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_ BO_  "Cycletime" INT 0 0;
+BA_DEF_  "MultiplexExtEnabled" ENUM  "No","Yes";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "SigType" "";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SingleFrame" 1;
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "SAE_J1939-71_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939-73_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939-21_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939-75_SpecVersion" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "Cycletime" 0;
+BA_DEF_DEF_  "MultiplexExtEnabled" "No";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_ "VFrameFormat" BO_ 2349442512 1;
+BA_ "Cycletime" BO_ 2348929189 10;
+BA_ "VFrameFormat" BO_ 2348929189 1;
+BA_ "VFrameFormat" BO_ 2348994725 1;
+BA_ "VFrameFormat" BO_ 2349060261 1;
+BA_ "VFrameFormat" BO_ 2349125797 1;
+BA_ "VFrameFormat" BO_ 2349387941 1;
+BA_ "VFrameFormat" BO_ 2349180368 1;
+BA_ "VFrameFormat" BO_ 2349245904 1;
+BA_ "VFrameFormat" BO_ 2349311440 1;
+BA_ "GenSigSendType" SG_ 2349180368 act_steering_velocity 0;
+VAL_ 2348929189 target_steering_mod 7 "力矩叠加指令" 6 "清除故障" 5 "手动介入恢复指令" 4 "手动控制指令" 3 "保留" 2 "保留" 1 "自动控制指令" 0 "待机指令" ;
+

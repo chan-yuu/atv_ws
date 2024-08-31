@@ -1,0 +1,11 @@
+work_space_name: "cotton_ws_panda"
+offset_x: 623789
+offset_y: 4068886
+tianjin_offset_x: 526733
+tianjin_offset_y: 4316017
+xian_offset_x: 294311
+xian_offset_y: 3798904
+high_curvature: 0.007
+high_curvature_road_speed: 5
+mid_curvature: 0.0014
+mid_curvature_road_speed: 8

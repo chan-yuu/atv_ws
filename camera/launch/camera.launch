@@ -1,0 +1,4 @@
+<launch>
+  <node name="camera_publisher_node" pkg="camera" type="camera_pub.py" output="screen" />
+  <node name="fog_detection_node" pkg="camera" type="detect_fog.py" output="screen" />
+</launch>

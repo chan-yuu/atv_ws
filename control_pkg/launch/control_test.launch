@@ -1,0 +1,13 @@
+<launch>
+  <!-- Load the URDF model -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find control_pkg)/urdf/vehicle.urdf'" />
+    <!-- <include file="$(find control_pkg)/launch/ackrm_rviz.launch" /> -->
+
+  <!-- Start the vehicle node -->
+    <node name="visual_path" pkg="control_pkg" type="path_visual.py" output="screen">
+    </node>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find control_pkg)/rviz/test.rviz">
+    </node>
+  <!-- Optional: RViz configuration -->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find your_package_name)/rviz/vehicle.rviz" /> -->
+</launch>
