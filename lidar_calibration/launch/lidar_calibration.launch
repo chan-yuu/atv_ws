@@ -1,0 +1,12 @@
+<launch>
+  <!-- 加载参数 -->
+  <rosparam file="$(find lidar_calibration)/config/lidar_calibration_params.yaml" command="load"/>
+
+  <!-- 启动激光雷达标定节点 -->
+  <node name="lidar_calibration_node" pkg="lidar_calibration" type="lidar_calibration_node" output="screen">
+    <!-- 传递参数 -->
+    <param name="input_topic" value="/lslidar_point_cloud"/>
+    <param name="output_topic" value="/fusion_points"/>
+    <param name="queue_size" value="10"/>
+  </node>
+</launch>

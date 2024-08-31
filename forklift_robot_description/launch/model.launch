@@ -1,0 +1,9 @@
+<launch>
+
+    <param name="robot_description" textfile="$(find forklift_robot_description)/urdf/my_forklift.urdf"/>
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
+        <!-- <node pkg="rviz" name="rviz" type="rviz" args="-d $(find perception)/rviz/test.rviz" /> -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find forklift_robot_description)/rviz/forklift.rviz"/> 
+</launch>
+

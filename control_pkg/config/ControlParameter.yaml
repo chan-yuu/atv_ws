@@ -1,0 +1,52 @@
+# CTE_Kp: 80
+# CTE_Kd: 100
+# Head_Kp: 28
+# Head_Kd: 2
+# Speed_Kp: 15
+# Speed_Ki: 10
+# Speed_Kd: 5
+# Speed_Kp_b: 100
+# Speed_Kd_b: 10
+
+
+Speed_Kp_low: 12
+Speed_Kd_low: 0.3
+Speed_Ki_low: 0.3
+Speed_Kp_b_low: 0
+Speed_Kd_b_low: 0
+Speed_Ki_b_low: 0
+
+
+Speed_Kp_high: 18
+Speed_Kd_high: 1
+Speed_Ki_high: 1
+Speed_Kp_b_high: 0
+Speed_Kd_b_high: 0
+Speed_Ki_b_high: 0
+
+#path_control:
+CTE_Kp: 200
+CTE_Kd: 10
+Head_Kp: 12
+Head_Kd: 7
+
+
+Height: 3.975
+Length: 9.105
+MaxSpeed: 15
+Maximum_climbing_grade: 32
+Minimum_ground_clearance: 0.305
+Minimum_turning_radius: 11
+Vehicle_model: TLI90A
+Weight: 31.47
+WheelBase: 5.625
+curb_weight: 3000
+TargetSpeed: 1
+Kv: 0.5
+Ki: 0.02
+Kd: 0.02
+K_kappa: 2
+i_sw: 25
+perception_mark : 5
+count_time : 120000
+Gain_SteerAngle2WheelAnlge: -25

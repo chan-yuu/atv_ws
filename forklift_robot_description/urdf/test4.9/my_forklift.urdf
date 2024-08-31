@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<robot name="forklift_robot">
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0.45 -0.55 -1" rpy="0 0 1.57" />
+      <geometry>
+        <mesh filename="package://forklift_robot_description/meshes/base_link.dae"/> 
+      </geometry>
+    </visual>
+  </link>
+
+  
+  <link name="fork">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <visual>
+      <origin xyz="0 1.6 -1" rpy="0 0 1.57" />
+      <geometry>
+        <mesh filename="package://forklift_robot_description/meshes/fork.dae"/> 
+      </geometry>
+
+    </visual>
+  </link>
+  <joint name="base_to_fork" type="fixed">
+    <parent link="base_link"/>
+    <child link="fork"/>
+    <origin xyz="0.35 0 0"/>
+  </joint>
+
+
+  <link name="wheel_front_left">
+    <visual>
+      <origin xyz="-0.25 -0.15 -1" rpy="0 0 1.57" />
+      <geometry>
+        <mesh filename="package://forklift_robot_description/meshes/wheel.dae"/> 
+      </geometry>
+    </visual>
+  </link>
+  <joint name="base_to_wheel_front_left" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel_front_left"/>
+    <origin xyz="-0.1 1.2 0"/>
+  </joint>
+
+
+  <link name="wheel_front_right">
+    <visual>
+      <origin xyz="0.43 1.45 -1" rpy="0 0 1.57" />
+      <geometry>
+        <mesh filename="package://forklift_robot_description/meshes/wheel.dae"/> 
+      </geometry>
+    </visual>
+  </link> 
+  <joint name="base_to_wheel_front_right" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel_front_right"/>
+    <origin xyz="0 -0.45 0"/>
+  </joint>
+
+
+  <link name="wheel_back_left">
+    <visual>
+      <origin xyz="1.4 -0.85 -1" rpy="0 0 1.57" />
+
+      <geometry>
+        <mesh filename="package://forklift_robot_description/meshes/wheel.dae"/> 
+      </geometry>
+    </visual>
+  </link>
+  <joint name="base_to_wheel_back_left" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel_back_left"/>
+    <origin xyz="-1.75 0.45 0"/>
+  </joint>
+
+  <link name="wheel_back_right">
+    <visual>
+      <origin xyz="2.15 -0. -1" rpy="0 0 1.57" />
+      <geometry>
+        <mesh filename="package://forklift_robot_description/meshes/wheel.dae"/> 
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_to_wheel_back_right" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel_back_right"/>
+    <origin xyz="-1.75 -0.45 0"/>
+  </joint>
+
+
+  <link name="rslidar">
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <cylinder length="0.05" radius="0.05" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="base_link_to_lidar_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="rslidar" />
+    <origin xyz="0 1 2" rpy="0 0 1.57" />
+  </joint>
+
+
+  <link name="livox_frame">
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <cylinder length="0.05" radius="0.05" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="base_link_to_livox" type="fixed">
+    <parent link="base_link" />
+    <child link="livox_frame" />
+    <origin xyz="-1 -0.45 0" rpy="0 0 0" />
+  </joint>
+
+
+  <link name="camera_link">
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <cylinder length="0.05" radius="0.05" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="base_link_to_camera_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="camera_link" />
+    <origin xyz="0 1.3 1.2" rpy="0 0 1.57" />
+  </joint>
+
+  <link name="imu">
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <cylinder length="0.05" radius="0.05" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="base_link_to_imu" type="fixed">
+    <parent link="base_link" />
+    <child link="imu" />
+    <origin xyz="0 1 2" rpy="0 0 1.57" />
+  </joint>
+
+</robot>
+

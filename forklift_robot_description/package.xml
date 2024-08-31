@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>forklift_robot_description</name>
+  <version>0.0.1</version>
+  <description>3D model of a simple forklift</description>
+  <maintainer email="renan028@gmail.com">Renan Freitas</maintainer>
+
+  <license>Apache License 2.0</license>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>catkin</build_depend>
+
+  <export>
+    <build_type>catkin</build_type>
+  </export>
+</package>
+
+<!-- <?xml version="1.0"?>
+<package format="2">
+  <name>forklift_robot_description</name>
+  <version>0.0.1</version>
+  <description> 3D model of a simple forklift </description>
+  <maintainer email="renan028@gmail.com"> </maintainer>
+  <author>Renan Freitas</author>
+
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package> -->

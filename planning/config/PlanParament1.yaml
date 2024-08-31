@@ -1,0 +1,4 @@
+# plan的配置参数
+
+mapfile: "~/forklift/hmi/config/1.map"
+min_distance_txt: "~/forklift/hmi/config/1.txt"

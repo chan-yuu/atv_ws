@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Start record Script
+Exec=/home/nvidia/atv_ws/src/self_start/exp/record.sh
+Icon=/home/nvidia/atv_ws/src/self_start/image/yl.jpg
+Terminal=true

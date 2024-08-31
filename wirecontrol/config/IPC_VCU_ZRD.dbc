@@ -1,0 +1,245 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ EPB_SystemState 5 "����" 4 "ʩѹ��" 3 "���ϣ�ֹͣ��ȷ��״̬��" 2 "�ͷ���" 1 "��ʩѹ" 0 "���ͷ�" ;
+VAL_TABLE_ Parking_Req 1 "�ͷ�" 0 "פ��" ;
+VAL_TABLE_ CarStartState 2 "�ػ�" 1 "����" 0 "δ֪" ;
+VAL_TABLE_ CarSts2 1 "��ͣ״̬" 0 "READY" ;
+VAL_TABLE_ CarSts1 3 "��������" 2 "��������" 1 "һ������" 0 "����" ;
+VAL_TABLE_ YK_F 1 "����" 0 "δ����" ;
+VAL_TABLE_ YK_H 1 "����" 0 "δ����" ;
+VAL_TABLE_ EPOSts 2 "Ӳ�ߴ���" 1 "ң��������" 0 "δ����" ;
+VAL_TABLE_ Gear 3 "D��" 2 "N��" 1 "����R" 0 "P��" ;
+VAL_TABLE_ Drive_Mode 2 "ң��������ģʽ" 1 "�Զ�ģʽ���߿أ�" 0 "�ֶ�����ģʽ������̤��+��λ��" ;
+VAL_TABLE_ OutLineLamp 1 "��" 0 "�ر�" ;
+VAL_TABLE_ AlarmLamp 1 "��" 0 "�ر�" ;
+VAL_TABLE_ Car_OFF 1 "�ػ�" 0 "����" ;
+VAL_TABLE_ Horn 1 "��" 0 "�ر�" ;
+VAL_TABLE_ FarLamp 1 "��" 0 "�ر�" ;
+VAL_TABLE_ TurnLamp 2 "��ת��" 1 "��ת��" 0 "��λ" ;
+VAL_TABLE_ DippedLamp 1 "��" 0 "�ر�" ;
+VAL_TABLE_ Brake_En 1 "ʹ��" 0 "δʹ��" ;
+VAL_TABLE_ Target_Gear 3 "D��" 2 "N��" 1 "����R" 0 "P��" ;
+VAL_TABLE_ IPC_En 1 "ʹ��" 0 "δʹ��" ;
+
+
+BO_ 608 IPC_260: 8 Vector__XXX
+ SG_ Fault : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_Sts : 8|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ VCU_Service_Voltage : 48|16@1+ (1,0) [0|65535] "mv" Vector__XXX
+ SG_ CarStartState : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 609 IPC_261: 8 Vector__XXX
+ SG_ LV_Sun : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LV_zCode : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LV_Main : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Time : 24|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+
+BO_ 521 IPC_209: 8 Vector__XXX
+ SG_ Ultrasonic12 : 24|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic11 : 16|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic10 : 8|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic9 : 0|8@1+ (1,0) [0|255] "cm" Vector__XXX
+
+BO_ 520 IPC_208: 8 Vector__XXX
+ SG_ Ultrasonic8 : 56|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic7 : 48|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic6 : 40|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic5 : 32|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic4 : 24|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic3 : 16|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic2 : 8|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic1 : 0|8@1+ (1,0) [0|255] "cm" Vector__XXX
+
+BO_ 515 IPC_203: 8 Vector__XXX
+ SG_ CarSts2 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CarSts1 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SOC : 48|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ RR_WheelSpeed : 32|16@1+ (1,-2000) [-2000|63535] "" Vector__XXX
+ SG_ LR_WheelSpeed : 16|16@1+ (1,-2000) [-2000|63535] "" Vector__XXX
+ SG_ Brake_Pressure : 0|16@1+ (0.05,0) [0|10] "MPa" Vector__XXX
+
+BO_ 514 IPC_202: 8 Vector__XXX
+ SG_ Mileage : 32|32@1+ (0.1,0) [0|999999.9] "km" Vector__XXX
+ SG_ Fault4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Fault3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Fault2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Fault1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 513 IPC_201: 8 Vector__XXX
+ SG_ EPB_SystemState : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ YK_H : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ YK_F : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Motor_Torque : 48|16@1+ (0.1,-2000) [-2000|4553.5] "n*m" Vector__XXX
+ SG_ Car_Speed : 32|16@1+ (0.1,0) [0|6553.5] "km/h" Vector__XXX
+ SG_ Gear : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EPOSts : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Drive_Mode : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Angle : 8|16@1- (1,0) [-32768|32767] "��" Vector__XXX
+
+BO_ 528 IPC_210: 8 Vector__XXX
+ SG_ Parking_Req : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TurnLamp : 57|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Target_Travel : 49|7@1+ (1,0) [0|125] "" Vector__XXX
+ SG_ Target_Speed : 8|16@1+ (1,0) [0|100] "��" Vector__XXX
+ SG_ Target_Gear : 0|3@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ Target_Angle : 32|16@1- (1,0) [-32768|32767] "��" Vector__XXX
+ SG_ OutLineLamp : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IPC_En : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Horn : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FarLamp : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DippedLamp : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Car_OFF : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Brake_En : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AlarmLamp : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ SG_ 608 Fault "��������";
+CM_ SG_ 608 VCU_Sts "VCU״̬	";
+CM_ SG_ 608 VCU_Service_Voltage "VCU�����ѹ";
+CM_ SG_ 608 CarStartState "��������״̬
+VCU״̬��ʶ����2/3/5ʱ����������ػ�
+";
+CM_ SG_ 609 LV_Sun "�Ӱ汾";
+CM_ SG_ 609 LV_zCode "�޶��汾";
+CM_ SG_ 609 LV_Main "���汾";
+CM_ SG_ 609 Time "����";
+CM_ SG_ 521 Ultrasonic12 "������12����ǰ��	
+";
+CM_ SG_ 521 Ultrasonic11 "������11	
+";
+CM_ SG_ 521 Ultrasonic10 "������10	
+";
+CM_ SG_ 521 Ultrasonic9 "������9	
+";
+CM_ SG_ 520 Ultrasonic8 "������8";
+CM_ SG_ 520 Ultrasonic7 "������7";
+CM_ SG_ 520 Ultrasonic6 "������6";
+CM_ SG_ 520 Ultrasonic5 "������5";
+CM_ SG_ 520 Ultrasonic4 "������4";
+CM_ SG_ 520 Ultrasonic3 "������3
+";
+CM_ SG_ 520 Ultrasonic2 "������2	
+";
+CM_ SG_ 520 Ultrasonic1 "������1����ǰ��";
+CM_ SG_ 515 CarSts2 "����״̬2	
+";
+CM_ SG_ 515 CarSts1 "����״̬1	
+";
+CM_ SG_ 515 SOC "��ص���
+";
+CM_ SG_ 515 RR_WheelSpeed "�Һ�����
+";
+CM_ SG_ 515 LR_WheelSpeed "�������
+";
+CM_ SG_ 515 Brake_Pressure "�ƶ�ѹ��
+";
+CM_ SG_ 514 Mileage "���
+";
+CM_ SG_ 514 Fault4 "���ϴ���4	
+	
+";
+CM_ SG_ 514 Fault3 "���ϴ���3	
+	
+";
+CM_ SG_ 514 Fault2 "���ϴ���2	
+	
+";
+CM_ SG_ 514 Fault1 "���ϴ���1	
+	
+";
+CM_ SG_ 513 EPB_SystemState "EPB����״̬";
+CM_ SG_ 513 YK_H "ң�ؼ�H
+";
+CM_ SG_ 513 YK_F "ң��F��
+";
+CM_ SG_ 513 Motor_Torque "���Ť��
+";
+CM_ SG_ 513 Car_Speed "��ǰ����
+";
+CM_ SG_ 513 Gear "��λ
+";
+CM_ SG_ 513 EPOSts "��ͣ״̬
+";
+CM_ SG_ 513 Drive_Mode "��ʻģʽ
+";
+CM_ SG_ 513 Angle "��ǰ�Ƕ�
+";
+CM_ SG_ 528 Parking_Req "פ������
+";
+CM_ SG_ 528 TurnLamp "ת���
+";
+CM_ SG_ 528 Target_Travel "Ŀ���г�
+";
+CM_ SG_ 528 Target_Speed "Ŀ�공��
+";
+CM_ SG_ 528 Target_Gear "Ŀ�굲λ
+";
+CM_ SG_ 528 Target_Angle "Ŀ��Ƕ�
+";
+CM_ SG_ 528 OutLineLamp "�����ƣ�С�ƣ�
+";
+CM_ SG_ 528 IPC_En "����ʹ��
+";
+CM_ SG_ 528 Horn "����
+";
+CM_ SG_ 528 FarLamp "Զ���
+";
+CM_ SG_ 528 DippedLamp "����
+";
+CM_ SG_ 528 Car_OFF "�ػ�
+";
+CM_ SG_ 528 Brake_En "�ƶ�ʹ��";
+CM_ SG_ 528 AlarmLamp "˫����App���룩";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "DBName" "IPC_VCU";
+VAL_ 513 YK_H 1 "����" 0 "δ����" ;
+VAL_ 513 YK_F 1 "����" 0 "δ����" ;
+

@@ -1,0 +1,6 @@
+gps_can_channel: 'can1'
+gps_dbc_file: '../config/new_ztbus_GPS.dbc'
+offset_x: 623789
+offset_y: 4068886
+tianjin_offset_x: 526733
+tianjin_offset_y: 4316017

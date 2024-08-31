@@ -1,0 +1,245 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ EPB_SystemState 5 "脱离" 4 "施压中" 3 "故障（停止或不确定状态）" 2 "释放中" 1 "已施压" 0 "已释放" ;
+VAL_TABLE_ Parking_Req 1 "释放" 0 "驻车" ;
+VAL_TABLE_ CarStartState 2 "关机" 1 "启动" 0 "未知" ;
+VAL_TABLE_ CarSts2 1 "急停状态" 0 "READY" ;
+VAL_TABLE_ CarSts1 3 "三级报警" 2 "二级报警" 1 "一级报警" 0 "正常" ;
+VAL_TABLE_ YK_F 1 "触发" 0 "未触发" ;
+VAL_TABLE_ YK_H 1 "触发" 0 "未触发" ;
+VAL_TABLE_ EPOSts 2 "硬线触发" 1 "遥控器触发" 0 "未触发" ;
+VAL_TABLE_ Gear 3 "D档" 2 "N档" 1 "倒挡R" 0 "P档" ;
+VAL_TABLE_ Drive_Mode 2 "遥控器调试模式" 1 "自动模式（线控）" 0 "手动控制模式（油门踏板+挡位）" ;
+VAL_TABLE_ OutLineLamp 1 "打开" 0 "关闭" ;
+VAL_TABLE_ AlarmLamp 1 "打开" 0 "关闭" ;
+VAL_TABLE_ Car_OFF 1 "关机" 0 "正常" ;
+VAL_TABLE_ Horn 1 "打开" 0 "关闭" ;
+VAL_TABLE_ FarLamp 1 "打开" 0 "关闭" ;
+VAL_TABLE_ TurnLamp 2 "右转向" 1 "左转向" 0 "归位" ;
+VAL_TABLE_ DippedLamp 1 "打开" 0 "关闭" ;
+VAL_TABLE_ Brake_En 1 "使能" 0 "未使能" ;
+VAL_TABLE_ Target_Gear 3 "D档" 2 "N档" 1 "倒挡R" 0 "P档" ;
+VAL_TABLE_ IPC_En 1 "使能" 0 "未使能" ;
+
+
+BO_ 608 IPC_260: 8 Vector__XXX
+ SG_ Fault : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_Sts : 8|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ VCU_Service_Voltage : 48|16@1+ (1,0) [0|65535] "mv" Vector__XXX
+ SG_ CarStartState : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 609 IPC_261: 8 Vector__XXX
+ SG_ LV_Sun : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LV_zCode : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LV_Main : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Time : 24|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+
+BO_ 521 IPC_209: 8 Vector__XXX
+ SG_ Ultrasonic12 : 24|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic11 : 16|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic10 : 8|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic9 : 0|8@1+ (1,0) [0|255] "cm" Vector__XXX
+
+BO_ 520 IPC_208: 8 Vector__XXX
+ SG_ Ultrasonic8 : 56|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic7 : 48|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic6 : 40|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic5 : 32|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic4 : 24|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic3 : 16|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic2 : 8|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ Ultrasonic1 : 0|8@1+ (1,0) [0|255] "cm" Vector__XXX
+
+BO_ 515 IPC_203: 8 Vector__XXX
+ SG_ CarSts2 : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CarSts1 : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SOC : 48|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ RR_WheelSpeed : 32|16@1+ (1,-2000) [-2000|63535] "" Vector__XXX
+ SG_ LR_WheelSpeed : 16|16@1+ (1,-2000) [-2000|63535] "" Vector__XXX
+ SG_ Brake_Pressure : 0|16@1+ (0.05,0) [0|10] "MPa" Vector__XXX
+
+BO_ 514 IPC_202: 8 Vector__XXX
+ SG_ Mileage : 32|32@1+ (0.1,0) [0|999999.9] "km" Vector__XXX
+ SG_ Fault4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Fault3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Fault2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Fault1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 513 IPC_201: 8 Vector__XXX
+ SG_ EPB_SystemState : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ YK_H : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ YK_F : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Motor_Torque : 48|16@1+ (0.1,-2000) [-2000|4553.5] "n*m" Vector__XXX
+ SG_ Car_Speed : 32|16@1+ (0.1,0) [0|6553.5] "km/h" Vector__XXX
+ SG_ Gear : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EPOSts : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Drive_Mode : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Angle : 8|16@1- (1,0) [-32768|32767] "°" Vector__XXX
+
+BO_ 528 IPC_210: 8 Vector__XXX
+ SG_ Parking_Req : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TurnLamp : 57|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Target_Travel : 49|7@1+ (1,0) [0|125] "" Vector__XXX
+ SG_ Target_Speed : 8|16@1+ (1,0) [0|100] "％" Vector__XXX
+ SG_ Target_Gear : 0|3@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ Target_Angle : 32|16@1- (1,0) [-32768|32767] "°" Vector__XXX
+ SG_ OutLineLamp : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IPC_En : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Horn : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FarLamp : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DippedLamp : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Car_OFF : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Brake_En : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AlarmLamp : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ SG_ 608 Fault "整车故障";
+CM_ SG_ 608 VCU_Sts "VCU状态	";
+CM_ SG_ 608 VCU_Service_Voltage "VCU供电电压";
+CM_ SG_ 608 CarStartState "车辆启动状态
+VCU状态标识等于2/3/5时开机，否则关机
+";
+CM_ SG_ 609 LV_Sun "子版本";
+CM_ SG_ 609 LV_zCode "修订版本";
+CM_ SG_ 609 LV_Main "主版本";
+CM_ SG_ 609 Time "日期";
+CM_ SG_ 521 Ultrasonic12 "超声波12（右前）	
+";
+CM_ SG_ 521 Ultrasonic11 "超声波11	
+";
+CM_ SG_ 521 Ultrasonic10 "超声波10	
+";
+CM_ SG_ 521 Ultrasonic9 "超声波9	
+";
+CM_ SG_ 520 Ultrasonic8 "超声波8";
+CM_ SG_ 520 Ultrasonic7 "超声波7";
+CM_ SG_ 520 Ultrasonic6 "超声波6";
+CM_ SG_ 520 Ultrasonic5 "超声波5";
+CM_ SG_ 520 Ultrasonic4 "超声波4";
+CM_ SG_ 520 Ultrasonic3 "超声波3
+";
+CM_ SG_ 520 Ultrasonic2 "超声波2	
+";
+CM_ SG_ 520 Ultrasonic1 "超声波1（左前）";
+CM_ SG_ 515 CarSts2 "车辆状态2	
+";
+CM_ SG_ 515 CarSts1 "车辆状态1	
+";
+CM_ SG_ 515 SOC "电池电量
+";
+CM_ SG_ 515 RR_WheelSpeed "右后轮速
+";
+CM_ SG_ 515 LR_WheelSpeed "左后轮速
+";
+CM_ SG_ 515 Brake_Pressure "制动压力
+";
+CM_ SG_ 514 Mileage "里程
+";
+CM_ SG_ 514 Fault4 "故障代码4	
+	
+";
+CM_ SG_ 514 Fault3 "故障代码3	
+	
+";
+CM_ SG_ 514 Fault2 "故障代码2	
+	
+";
+CM_ SG_ 514 Fault1 "故障代码1	
+	
+";
+CM_ SG_ 513 EPB_SystemState "EPB开关状态";
+CM_ SG_ 513 YK_H "遥控键H
+";
+CM_ SG_ 513 YK_F "遥控F键
+";
+CM_ SG_ 513 Motor_Torque "电机扭矩
+";
+CM_ SG_ 513 Car_Speed "当前车速
+";
+CM_ SG_ 513 Gear "挡位
+";
+CM_ SG_ 513 EPOSts "急停状态
+";
+CM_ SG_ 513 Drive_Mode "驾驶模式
+";
+CM_ SG_ 513 Angle "当前角度
+";
+CM_ SG_ 528 Parking_Req "驻车请求
+";
+CM_ SG_ 528 TurnLamp "转向灯
+";
+CM_ SG_ 528 Target_Travel "目标行程
+";
+CM_ SG_ 528 Target_Speed "目标车速
+";
+CM_ SG_ 528 Target_Gear "目标挡位
+";
+CM_ SG_ 528 Target_Angle "目标角度
+";
+CM_ SG_ 528 OutLineLamp "轮廓灯（小灯）
+";
+CM_ SG_ 528 IPC_En "控制使能
+";
+CM_ SG_ 528 Horn "喇叭
+";
+CM_ SG_ 528 FarLamp "远光灯
+";
+CM_ SG_ 528 DippedLamp "近光
+";
+CM_ SG_ 528 Car_OFF "关机
+";
+CM_ SG_ 528 Brake_En "制动使能";
+CM_ SG_ 528 AlarmLamp "双闪（App接入）";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "DBName" "IPC_VCU";
+VAL_ 513 YK_H 1 "触发" 0 "未触发" ;
+VAL_ 513 YK_F 1 "触发" 0 "未触发" ;
+

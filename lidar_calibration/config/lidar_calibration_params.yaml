@@ -1,0 +1,15 @@
+# calibration:
+#   x_offset: 0.0
+#   y_offset: 0.0
+#   z_offset: 0.0
+#   roll_offset: -0.174
+#   pitch_offset: 0
+#   yaw_offset: -1.57
+
+calibration:
+  x_offset: 0.0
+  y_offset: 0.0
+  z_offset: 0.4
+  roll_offset: -0.074
+  pitch_offset: 0
+  yaw_offset: -1.57

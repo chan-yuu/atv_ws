@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Start gps_plan_control Script
+Exec=/home/nvidia/atv_ws/src/self_start/exp/one_step_start1.sh
+Icon=/home/nvidia/atv_ws/src/self_start/image/pm.jpeg
+Terminal=true

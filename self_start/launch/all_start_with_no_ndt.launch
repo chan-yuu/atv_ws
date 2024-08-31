@@ -1,0 +1,27 @@
+<launch>
+    <!-- <rosparam command="load" file="$(find planning)/config/PlanParament1.yaml" /> -->
+    
+    <node name="gps" pkg="perception" type="gps_imu_pub.py" />
+    
+    <!-- <node name="ndt" pkg="" type=""/>   -->
+    <!-- # <include $(find)> -->
+    <!-- <include file="$(find rslidar_sdk)/launch/start.launch" />
+
+    <include file="$(find ndt_localizer)/launch/ndt_localizer.launch" /> -->
+
+    <!-- <include file="$(find lidar_obstacle_detection)/launch/lidar_obstacle_detection.launch" /> -->
+
+    <!-- 第二个节点，在第一个节点启动后等待指定的时间后启动 -->
+    <node name="planning" pkg="planning" type="plan_net_wp.py" />
+
+        <!-- <param name="mapfile" type="string" value="/home/nvidia/forklift_ws/src/hmi/config/wp2.map" />
+        <param name="min_distance_txt" type="string" value="/home/nvidia/forklift_ws/src/hmi/config/wp2.txt" /> -->
+
+    
+	<node name="control" pkg="control" type="path_speed_control_wp.py" output="screen"/>
+
+	<node name="wirecontrol_can" pkg="wirecontrol" type="wire_control_can_pub_wp.py" />
+    <!-- <node name="show_rviz" pkg="show_rviz" type="mark.py" /> -->
+    <include file="$(find show_rviz)/launch/show_rviz.launch" />
+
+</launch>

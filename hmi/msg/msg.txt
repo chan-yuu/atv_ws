@@ -1,0 +1,24 @@
+1.hmi的msg：
+RoadID  #界面上设置的值
+LaneID  #界面上设置的值
+Left  # 1-左车道
+Right  # 1-为右车道（现在先只考虑一左一右）
+Speed  #
+Pos  # 采集的定位点，订阅gps话题（'/gps_imu'）拿到，判断一下，每隔0.5m采集一个x和y，格式为：
+# f.write(str(Lon) + ',' + str(Lat) + ',' + str(Head) + ',' + str(UTM_x) + ',' + str(UTM_y) + '\t')
+# 不进行发送，需要存成一个.map文件：
+#（上下一一对应）
+RoadID	LaneID	Left	Right	Pos
+0	0	0	0	0	117.31262312312,38.99038224283,-93.17946958799999,27074.27712129905,15755.765270619653	117.31262305822,38.99037757846,-93.054327368,27074.273277717166,15755.247640403919
+# 格式不对后面再慢慢调
+
+
+
+2.Gps的msg：
+#只给出需要用到的
+float64  PosLon        # 经度
+float64  PosLat         # 纬度
+float64  AngleHeading         # 偏航角（-180-180）
+float64 posX                    #定位点UTM坐标x
+float64 posY                    #定位点UTM坐标y
+

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Start stop Script
+Exec=/home/nvidia/atv_ws/src/self_start/exp/stop.sh
+Icon=/home/nvidia/atv_ws/src/self_start/image/qi.jpg
+Terminal=true

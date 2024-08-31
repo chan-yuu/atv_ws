@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<robot name="forklift_robot">
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="-2.25 -0.65 -0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://forklift_robot_description/meshes/base_link.dae"/> 
+      </geometry>
+    </visual>
+  </link>
+
+
+  <link name="rslidar">
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <cylinder length="0.05" radius="0.05" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="base_link_to_lidar_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="rslidar" />
+    <origin xyz="-1.75 0 1.6" rpy="0 0 0" />
+  </joint>
+
+
+
+  <link name="imu">
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <cylinder length="0.05" radius="0.05" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="base_link_to_imu" type="fixed">
+    <parent link="base_link" />
+    <child link="imu" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+</robot>
+

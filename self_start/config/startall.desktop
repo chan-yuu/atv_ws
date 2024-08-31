@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=start
+GenericName=start
+Comment=start
+Exec="/home/cyun/las/src/self_start/config/startall.sh" %f
+Icon=/home/cyun/las/src/self_start/config/1.jpeg
+Terminal=start
+Categories=start;

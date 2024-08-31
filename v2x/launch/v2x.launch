@@ -1,0 +1,11 @@
+<launch>
+    <!-- <node name="gps_imu_pub" pkg="perception" type="gps_imu_pubtest.py" output="screen"> -->
+    <!-- </node> -->
+    <include file="$(find rslidar_sdk)/launch/start.launch" />
+    <include file="$(find fusion_pointclouds)/launch/fusion_pointclouds.launch" />
+    <include file="$(find lidarObstacleDetect)/launch/lidar_obstacle_detection.launch" />
+    <!-- <include file="$(find rslidar_sdk)/launch/start.launch" /> -->
+
+</launch>
+
+

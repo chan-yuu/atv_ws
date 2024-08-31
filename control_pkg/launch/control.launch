@@ -1,0 +1,23 @@
+<launch>
+
+    <!-- 道路信息 -->
+    <arg name="line_length" default="3.6" />
+
+    <!-- 启动节点 -->
+    <node name="control_pkg" pkg="control_pkg" type="control_node.py" output="screen">
+        <param name="line_length" value="$(arg line_length)" />
+    </node>
+
+    <!-- <node name="visual_path" pkg="control_pkg" type="path_visual.py" output="screen">
+    </node> -->
+
+  <param name="robot_description" command="$(find xacro)/xacro '$(find control_pkg)/urdf/vehicle.urdf'" />
+    <!-- <include file="$(find control_pkg)/launch/ackrm_rviz.launch" /> -->
+
+  <!-- Start the vehicle node -->
+    <node name="visual_path" pkg="control_pkg" type="path_visual.py" output="screen">
+    </node>
+    <node name="rviz3" pkg="rviz" type="rviz" args="-d $(find control_pkg)/rviz/test.rviz">
+    </node>
+</launch>
+

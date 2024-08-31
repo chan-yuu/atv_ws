@@ -1,0 +1,48 @@
+speed_control:
+  Speed_Kp_t: 250.0
+  Speed_Ki_t: 10.0
+  Speed_Kd_t: 5.0
+
+  Speed_Kp_b: 100
+  Speed_Ki_b: 10.0
+  Speed_Kd_b: 5.0
+
+acc_control:
+  Acc_Kp_t: 100
+  Acc_Ki_t: 0.05
+  Acc_Kd_t: 0.5
+
+  Acc_Kp_b: 50
+  Acc_Ki_b: 0.05
+  Acc_Kd_b: 0.5
+
+speed_pid_low_conf:
+  integrator_enable: true
+  integrator_saturation_level: 0.1
+  output_saturation_level: 0.25
+  kp: 3
+  ki: 0.5
+  kd: 0.0
+  kaw: 0.0
+  ts: 0.01
+
+speed_pid_high_conf:
+  integrator_enable: true
+  integrator_saturation_level: 0.3
+  output_saturation_level: 0.0
+  kp: 2
+  ki: 0.3
+  kd: 0.0
+  kaw: 0.0
+  ts: 0.01
+
+
+
+path_control:
+  Kv: 0.25
+  Ki: 0.02
+  Kd: 0.0
+  L: 1.75
+  maxWheelAngle: 72.0
+  WheelToSteering: 1
+  end_dis: 0.1

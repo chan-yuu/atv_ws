@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Start wirecontrol Script
+Exec=/home/nvidia/atv_ws/src/self_start/exp/one_step_start2.sh
+Icon=/home/nvidia/atv_ws/src/self_start/image/kk.jpg
+Terminal=true
