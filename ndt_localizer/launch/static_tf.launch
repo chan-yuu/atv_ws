@@ -1,0 +1,12 @@
+<launch>
+
+    <param name="robot_description" textfile="$(find forklift_robot_description)/urdf/my_forklift.urdf"/>
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
+     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
+  <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="base_to_lidar" args="0 0 0 0 0 0  base_link  rslidar" /> 
+ <node pkg="tf2_ros" type="static_transform_publisher" name="world_to_map" args="0 0 0 0 0 0  world  map" />  -->
+  
+ 
+  
+   
+</launch>

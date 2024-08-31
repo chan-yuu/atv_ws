@@ -1,0 +1,47 @@
+common:
+  msg_source: 1                                         
+  send_packet_ros: false                               
+  send_point_cloud_ros: true                           
+lidar:
+  - driver:
+      lidar_type: RS128           
+      msop_port: 6699             
+      difop_port: 7788            
+      start_angle: 0              
+      end_angle: 360               
+      min_distance: 0.2            
+      max_distance: 200            
+      use_lidar_clock: false        
+    ros:
+      ros_frame_id: rslidar           
+      ros_recv_packet_topic: /middle/rslidar_packets    
+      ros_send_packet_topic: /middle/rslidar_packets    
+      ros_send_point_cloud_topic: /middle/rslidar_points      
+  - driver:
+      lidar_type: RSBP           
+      msop_port: 1990             
+      difop_port: 1991            
+      start_angle: 0              
+      end_angle: 360               
+      min_distance: 0.2            
+      max_distance: 200            
+      use_lidar_clock: false        
+    ros:
+      ros_frame_id: rslidar           
+      ros_recv_packet_topic: /left/rslidar_packets    
+      ros_send_packet_topic: /left/rslidar_packets    
+      ros_send_point_cloud_topic: /left/rslidar_points      
+  - driver:
+      lidar_type: RSBP           
+      msop_port: 2010             
+      difop_port: 2011            
+      start_angle: 0              
+      end_angle: 360               
+      min_distance: 0.2            
+      max_distance: 200            
+      use_lidar_clock: false        
+    ros:
+      ros_frame_id: rslidar           
+      ros_recv_packet_topic: /right/rslidar_packets    
+      ros_send_packet_topic: /right/rslidar_packets    
+      ros_send_point_cloud_topic: /right/rslidar_points      
